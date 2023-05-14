@@ -19,7 +19,7 @@
     height: 100vh;
   }
   .authentication_wrapper.authentication_basic .authentication_inner {
-    max-width: 400px;
+    max-width: 500px;
     position: relative;
   }
   .authentication_wrapper.authentication_basic .authentication_inner:before {
