@@ -2,7 +2,7 @@ import { createContext, useState, useContext, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 export const VenParadaiseSpaContext = createContext();
 import { useRouter } from "next/router";
-import { userService } from "@/services/UserService";
+import { userService } from "../services/UserService";
 export const useContextVenParadaiseSpa = () =>
   useContext(VenParadaiseSpaContext);
 

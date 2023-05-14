@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Header() {
+function HeaderI() {
   return (
     <div>HdIndex</div>
   )
 }
 
-export default Header
+export default HeaderI

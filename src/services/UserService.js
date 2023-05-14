@@ -1,7 +1,7 @@
 import { BehaviorSubject } from "rxjs";
 import Router from "next/router";
 import Cookies from "universal-cookie";
-import { fetchWrapper } from "@/helpers/fetch-wrapper";
+import { fetchWrapper } from "../helpers/fetch-wrapper";
 
 
 
@@ -23,12 +23,12 @@ export const userService = {
   },
   login,
   logout,
-  register,
-  getAll,
-  getById,
-  update,
+  // register,
+  // getAll,
+  // getById,
+  // update,
   logoutLogin,
-  delete: _delete,
+  // delete: _delete,
 };
 
 async function login(username, password) {
@@ -86,34 +86,34 @@ function logoutLogin() {
   userSubject.next(null);
 }
 
-function register(user) {
-  return fetchWrapper.post(`${baseUrl}/register`, user);
-}
+// function register(user) {
+//   return fetchWrapper.post(`${baseUrl}/register`, user);
+// }
 
-function getAll() {
-  return fetchWrapper.get(baseUrl);
-}
+// function getAll() {
+//   return fetchWrapper.get(baseUrl);
+// }
 
-function getById(id) {
-  return fetchWrapper.get(`${baseUrl}/${id}`);
-}
+// function getById(id) {
+//   return fetchWrapper.get(`${baseUrl}/${id}`);
+// }
 
-function update(id, params) {
-  return fetchWrapper.put(`${baseUrl}/${id}`, params).then((x) => {
-    // update stored user if the logged in user updated their own record
-    if (id === userSubject.value.id) {
-      // update local storage
-      const user = { ...userSubject.value, ...params };
-      localStorage.setItem("user", JSON.stringify(user));
+// function update(id, params) {
+//   return fetchWrapper.put(`${baseUrl}/${id}`, params).then((x) => {
+//     // update stored user if the logged in user updated their own record
+//     if (id === userSubject.value.id) {
+//       // update local storage
+//       const user = { ...userSubject.value, ...params };
+//       localStorage.setItem("user", JSON.stringify(user));
 
-      // publish updated user to subscribers
-      userSubject.next(user);
-    }
-    return x;
-  });
-}
+//       // publish updated user to subscribers
+//       userSubject.next(user);
+//     }
+//     return x;
+//   });
+// }
 
-// prefixed with underscored because delete is a reserved word in javascript
-function _delete(id) {
-  return fetchWrapper.delete(`${baseUrl}/${id}`);
-}
+// // prefixed with underscored because delete is a reserved word in javascript
+// function _delete(id) {
+//   return fetchWrapper.delete(`${baseUrl}/${id}`);
+// }

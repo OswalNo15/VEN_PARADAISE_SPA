@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-
+const fs = require('fs');
 const runtimeCaching = require("next-pwa/cache");
 
 const withPWA = require("next-pwa")({
