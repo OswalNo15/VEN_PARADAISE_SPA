@@ -35,21 +35,21 @@ export default function Home() {
   );
 }
 
-export async function getServerSideProps(ctx) {
-  const cookie = ctx.req.cookies["tokenUserCookie"];
-  if (cookie) {
-    // const ListadoGrupoActivo = await QueryActivegroup(cookie);
-    // const ListadoGrupoInactivo = await QueryInactivegroup(cookie);
-    return {
-      props: {
-        HOla: null,
-      },
-    };
-  } else {
-    return {
-      redirect: {
-        destination: "/Account/Login",
-      },
-    };
-  }
-}
+// export async function getServerSideProps(ctx) {
+//   const cookie = ctx.req.cookies["tokenUserCookie"];
+//   if (cookie) {
+//     // const ListadoGrupoActivo = await QueryActivegroup(cookie);
+//     // const ListadoGrupoInactivo = await QueryInactivegroup(cookie);
+//     return {
+//       props: {
+//         HOla: null,
+//       },
+//     };
+//   } else {
+//     return {
+//       redirect: {
+//         destination: "/Account/Login",
+//       },
+//     };
+//   }
+// }

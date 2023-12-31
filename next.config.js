@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const fs = require('fs');
+const fs = require("fs");
 const runtimeCaching = require("next-pwa/cache");
 
 const withPWA = require("next-pwa")({
@@ -47,6 +47,19 @@ const nextConfig = withPWA({
               "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
           },
         ],
+      },
+    ];
+  },
+
+  async rewrites() {
+    return [
+      {
+        source: "/account/Login",
+        destination: "/Account/Login/",
+      },
+      {
+        source: "/account/login",
+        destination: "/Account/Login/",
       },
     ];
   },
