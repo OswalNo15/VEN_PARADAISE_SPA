@@ -80,9 +80,9 @@ function LoginComponents() {
                 <div
                   className={`${StyleLogin.app_brand} app-brand justify-content-center`}
                 >
-                  <Link href="#" className="app-brand-link gap-2">
+                  <Link href="/" className="app-brand-link gap-2">
                     <span className="app-brand-logo demo">
-                      <img src="/img/Logo_VenParadaiseSpa192x192.png"></img>
+                      <img src="/img/Logo_VenParadaiseSpa192x192.webp"></img>
                     </span>
                   </Link>
                 </div>

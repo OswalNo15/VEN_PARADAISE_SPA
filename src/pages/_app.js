@@ -4,6 +4,7 @@ import "../styles/perfect-scrollbar.css"
 import "../styles/apex-charts.css"
 import "../styles/boxicons.css"
 import "../styles/theme-default.css"
+import "../styles/templatemo-softy-pinko.css"
 import ErrorBoundary from "../components/tools/ErrorBoundary";
 import { usePageLoading } from "../components/tools/usePageloading";
 import { VenParadaiseSpaContextProvider } from "../context/VenParadaiseSpaContext";
@@ -18,6 +19,7 @@ export default function App({ Component, pageProps }) {
         {isPageLoading ? (
           <Loading></Loading>
         ) : (
+          
           <Layout>
             <div id="fb-root"></div>
             
